@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" class="p-3 m-3">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão do Tempo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style>
+
+    </style>
+
+</head>
+
+<body class="bg-light bg-gradient">
+    <div>
+        <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+            <div class="container-fluid">
+                <img src="imagens/icone.jpg" alt="" width="300" height="100" class="d-inline-block align-text-top">
+                <h1>Weather</h1>
+            </div>
+        </nav>
+        <div class="row">
+            <!---Campo de pesquisa-->
+            <div class="col-3 p-3">
+                <h3>Pesquisar</h3>
+                <br>
+                <label class="form-label" for="idLocal">Insira a localidade:</label>
+                <input class="form-control w-100" type="text" id="idLocal">
+                <label class="form-label" for="idNumber">Previsão para quantos dias?</label>
+                <input class="form-control w-100" type="number" id="idNumber" name="nmDate" placeholder="De 1-3" max="3"
+                    min="1">
+                <br><br>
+                <button class="btn btn-primary" type="button" id="btnPesquisar">Pesquisar</button>
+            </div>
+            <!---Campo de exibição clima/dia-->
+            <div class="col-4 p-3">
+                <h3>Clima Hoje</h3>
+                <output id="idOut"></output>
+                <img src="https://media3.giphy.com/media/26FL3uMhARSAvIZZS/giphy.gif?cid=ecf05e47z9kta77xjnnfooo2cmcxp1xy2n0vubke2lm4k5xj&rid=giphy.gif&ct=g"
+                    alt="gif animado" class="w-100" id="idGifAnimado">
+            </div>
+            <div class="col-5 p-3">
+                <!---Campo de exibição clima/futuro-->
+                <h3 id="idTitulo">Previsão para os próximos dias</h3>
+                <br>
+
+                <output id="idOut2"></output>
+                <table class="table table-primary " id="idTabela">
+                    <caption>Dados Climáticos</caption>
+                    <thead>
+                        <tr>
+                            <th id="idThData">Data</th>
+                            <th id="idThMax">Máxima °C</th>
+                            <th id="idThMin">Mínima °C</th>
+                            <th id="idThUmid">Umidade</th>
+                            <th id="idThVento">Condições</th>
+                        </tr>
+                    </thead>
+                    <tbody class="idBodyTb">
+                        <tr>
+                            <td id="idDataTb0"></td>
+                            <td id="idMaxTb0"></td>
+                            <td id="idMinTb0"></td>
+                            <td id="idUmidadeTb0"></td>
+                            <td id="idCondTb0"></td>
+
+                        </tr>
+                        <tr>
+                            <td id="idDataTb1"></td>
+                            <td id="idMaxTb1"></td>
+                            <td id="idMinTb1"></td>
+                            <td id="idUmidadeTb1"></td>
+                            <td id="idCondTb1"></td>
+
+                        </tr>
+                        <tr>
+                            <td id="idDataTb2"></td>
+                            <td id="idMaxTb2"></td>
+                            <td id="idMinTb2"></td>
+                            <td id="idUmidadeTb2"></td>
+                            <td id="idCondTb2"></td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+        integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
